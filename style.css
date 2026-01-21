@@ -1,0 +1,49 @@
+body {
+    text-align: center;
+    font-family: 'fantasy', 'papyrus', 'cursive';
+    font-size: larger;
+    background-color: darkslategray;
+    color: whitesmoke;
+}
+
+header {
+    font-size: xx-large;
+}
+
+nav {
+    border-bottom: 2px solid whitesmoke;
+}
+
+nav a:link,
+nav a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 15px;
+}
+
+nav a:hover {
+    background-color: lightslategray;
+}
+
+main-image {
+    width: 150px;
+    padding: 30px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.list {
+    text-align: center;
+
+}
+
+ul {
+    text-align: left;
+    display: inline-block;
+    list-style-position: inside;
+    padding-left: 100px;
+}
