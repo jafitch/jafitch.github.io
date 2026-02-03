@@ -26,4 +26,6 @@ if(isMorning)
 {
     marquee.innerHTML=welcomeMessages[2]
 }
-
+const key="It's a secret to everybody."
+const secret='Poor Dadanga, 1000 brownie points for you if you can connect your secret to mine'
+localStorage.setItem(key,secret)
