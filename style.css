@@ -47,6 +47,7 @@ ul {
     list-style-position: inside;
     padding-left: 100px;
 }
+
 #carousel {
     display: flex;
     justify-content: center;
@@ -69,4 +70,8 @@ ul {
     align-items: center;
     gap: 10px;
     margin-top: 10px;
+}
+
+.todo-list {
+    padding-left: 0px;
 }

@@ -60,3 +60,4 @@ next.addEventListener('click', () => {
     currentImage++
     showImages()
 })
+
