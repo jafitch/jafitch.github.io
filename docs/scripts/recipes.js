@@ -12,6 +12,10 @@ const modalElements = {
     image: document.getElementById('recipesmodalImage')
 }
 
+if (!modal) {
+    console.warn('recipes.js: recipesModal element not found on this page.')
+}
+
 const missingModal = Object.keys(modalElements).filter(k => !modalElements[k])
 if (missingModal.length) console.warn('recipes.js: missing modal element(s):', missingModal.join(','))
 
@@ -90,14 +94,18 @@ const showRecipeDetails = async id => {
     modal.style.display = 'flex'
 }
 
-closeButton.onclick = () => modal.style.display = 'none'
-
-window.onclick = event => {
-    if (event.target === modal) modal.style.display = 'none'
+if (closeButton && modal) {
+    closeButton.onclick = () => modal.style.display = 'none'
 }
 
-    ; (async () => {
-        const recipes = await getRecipeItems()
-        showRecipesList(recipes)
+if (modal) {
+    window.onclick = event => {
+        if (event.target === modal) modal.style.display = 'none'
+    }
+}
 
-    })()
+; (async () => {
+    if (!recipesList) return
+    const recipes = await getRecipeItems()
+    showRecipesList(recipes)
+})()
