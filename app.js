@@ -4,7 +4,7 @@ const app = express()
 const port = 3000
 
 app.use(express.json())
-app.use(express.static('public'))
+app.use(express.static('docs'))
 app.use('/api/v1/recipes', require('./routes/api/v1/recipes.js'))
 //app.use('/api/v1/events', require('./routes/api/v1/events.js'))
 app.use(require('./routes/static'))
