@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Recipe</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./scripts/site.js" defer></script>
+    <script src="./scripts/create-recipe.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Jeff Fitch</h1>
+    </header>
+
+    <nav>
+        <a href="./index.htm" id="home">Home</a>
+        <a href="./order.htm" id="order">Order</a>
+        <a href="./recipes.htm" id="recipes" class="active">Recipes</a>
+    </nav>
+
+    <section>
+        <h1>Add a Recipe</h1>
+        <div class="page-actions">
+            <a href="./recipes.htm" class="primary-button">Back to Recipes</a>
+        </div>
+
+        <div class="form-container">
+            <form id="recipeForm" class="form-grid">
+                <div class="form-field">
+                    <label for="recipeName">Recipe Name</label>
+                    <input id="recipeName" name="name" type="text" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="recipeCategory">Category</label>
+                    <input id="recipeCategory" name="category" type="text" placeholder="Dinner, Breakfast, Dessert...">
+                </div>
+
+                <div class="form-field">
+                    <label for="recipeImage">Image URL</label>
+                    <input id="recipeImage" name="image" type="url" placeholder="https://...">
+                </div>
+
+                <div class="form-field">
+                    <label for="recipeDescription">Description</label>
+                    <textarea id="recipeDescription" name="description"
+                        placeholder="Optional short description"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="recipeIngredients">Ingredients</label>
+                    <textarea id="recipeIngredients" name="ingredients" placeholder="Example: flour, eggs, milk, butter"
+                        required></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="recipeInstructions">Instructions</label>
+                    <textarea id="recipeInstructions" name="instructions"
+                        placeholder="One step per line. Example: Preheat the oven. Mix ingredients together."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">Save Recipe</button>
+                <div id="recipeStatus" class="form-status" aria-live="polite"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p><span>&copy;</span> 2026 Jeff's webpage. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

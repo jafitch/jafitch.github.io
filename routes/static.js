@@ -25,6 +25,12 @@ router.get('/recipes', (request, response) => {
 router.get('/recipes.htm', (request, response) => {
     servePage(response, 'recipes.htm')
 })
+router.get('/create-recipe', (request, response) => {
+    servePage(response, 'create-recipe.htm')
+})
+router.get('/create-recipe.htm', (request, response) => {
+    servePage(response, 'create-recipe.htm')
+})
 router.get('/admin', (request, response) => {
     servePage(response, 'admin.htm')
 })

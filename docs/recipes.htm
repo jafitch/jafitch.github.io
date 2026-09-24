@@ -25,7 +25,9 @@
 
         <section>
             <h1>Recipes</h1>
-
+            <div class="page-actions">
+                <a href="./create-recipe.htm" class="primary-button">Add a Recipe</a>
+            </div>
         </section>
         <div class="recipes">
 
@@ -34,11 +36,26 @@
     <div class="modal" id="recipesModal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <img id="recipesmodalImage" src="" alt="recipe image">
-            <div class="modal-details">
-                <h2 id="recipesmodalName"></h2>
-                <p><strong>Ingredients:</strong> <span id="recipesmodalIngredients"></span></p>
-                <p><strong>Instructions:</strong> <span id="recipesmodalInstructions"></span></p>
+            <div class="modal-header">
+                <h2 id="recipesmodalName" class="modal-title"></h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-hero">
+                    <img id="recipesmodalImage" src="" alt="recipe image">
+                    <button id="deleteRecipeButton" class="delete-button" type="button">Delete Recipe</button>
+                </div>
+                <div class="modal-details">
+                    <div class="recipe-columns">
+                        <div class="recipe-detail-group">
+                            <p><strong>Ingredients:</strong></p>
+                            <ul id="recipesmodalIngredients" class="recipe-list"></ul>
+                        </div>
+                        <div class="recipe-detail-group">
+                            <p><strong>Instructions:</strong></p>
+                            <ol id="recipesmodalInstructions" class="recipe-instructions"></ol>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
